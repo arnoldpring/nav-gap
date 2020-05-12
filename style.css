@@ -15,13 +15,30 @@ body nav .nav-wrap .navlist .subnav {
   visibility: hidden;
   z-index: 1;
   opacity: 0;
-  transition: 0.3s ease-out;
+  transition: 0.3s ease-in-out;
   border-top: 1px solid transparent; }
 body nav .nav-wrap .navlist .nav:hover .subnav {
   border-top: 1px #bdbdbd solid;
   height: auto;
   opacity: 1;
   visibility: visible;
-  transition: 0.3s ease-out; }
+  transition: 0.3s ease-in-out; }
+
+@media screen and (max-width: 1024px) {
+  .nav-wrap #check:checked .navlist ul {
+    left: 0; }
+  .nav-wrap .gap-wrap .menu-bar {
+    visibility: visible; }
+  .nav-wrap .navlist ul {
+    position: fixed;
+    background-color: white;
+    display: block;
+    padding: 0;
+    width: 40%;
+    transition: all 0.5s ease-in-out; }
+    .nav-wrap .navlist ul li {
+      padding: 1rem 1rem; }
+  .nav-wrap .navlist .nav {
+    pointer-events: none; } }
 
 /*# sourceMappingURL=style.css.map */
